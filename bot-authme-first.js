@@ -4,32 +4,26 @@ const { pathfinder, Movements, goals } = require('mineflayer-pathfinder');
 // Configuration - Edit these values for your server
 const config = {
   server: {
-    host: 'localhost', // Change to your server IP
+    host: 'mc.craftmc.lt', // Change to your server IP
     port: 25565,
     version: '1.20.4' // Change to your server version
   },
   bot: {
-    username: 'AFKBot', // Change to your desired bot name
+    username: 'saulytea.afk', // Change to your desired bot name
     auth: 'offline', // 'offline', 'microsoft', or 'mojang'
     password: '', // Minecraft account password (if using premium auth)
-    authmePassword: 'change_this_password' // AuthMe password for /register and /login
+    authmePassword: 'saulytea' // AuthMe password for /register and /login
   },
   serverCommands: {
     enabled: true,
-    joinServer: '/server survival', // Command to join specific server AFTER AuthMe
+    joinServer: '/home home', // Command to join specific server AFTER AuthMe
     delay: 3000 // Wait 3 seconds after AuthMe before sending server command
   },
   features: {
     autoReconnect: {
       enabled: true,
       delay: 5000
-    },
-    movement: {
-      enabled: true,
-      coordinates: {
-        x: 0, // Change to your desired AFK coordinates
-        y: 64,
-        z: 0
+    
       }
     },
     antiAFK: {
@@ -38,15 +32,7 @@ const config = {
       sneak: false,
       look: true,
       interval: 30000 // 30 seconds
-    },
-    chatMessages: {
-      enabled: false,
-      interval: 300000, // 5 minutes
-      messages: [
-        'Still here!',
-        'AFK farming...',
-        'Bot is active'
-      ]
+    
     },
     chatLog: {
       enabled: true
